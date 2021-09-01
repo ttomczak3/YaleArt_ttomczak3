@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.Master.cs" Inherits="YaleArt_ttomczak3.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Yale School of Art</title>
+    <link href="CSS/Style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server"/>
+</head>
+<body>
+    <header>
+        <h1>Yale School of Art</h1>
+    </header>
+    <form id="form1" runat="server">
+        <asp:Menu ID="MainNav" runat="server" DataSourceID="MainNavDS"></asp:Menu>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"/>
+        </div>
+    </form>
+    <footer>
+        <p><small>1156 Chapel Street, POB 208339 New Haven, Connecticut, 06520-8339</small></p>
+        <p><small>Copyright &copy; Yale School of Art 2020</small></p>
+    </footer>
+    <asp:SiteMapDataSource ID="MainNavDS" runat="server" ShowStartingNode="False" />
+</body>
+</html>
